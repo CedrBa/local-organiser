@@ -1,0 +1,40 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+*.egg-info/
+*.py[cod]
+*.sqlite3*
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.log
+chat log.txt
+data/*.sqlite3
+data/*.sqlite3-shm
+data/*.sqlite3-wal
+data/*.before-phase1.sqlite3
+data/*.before-phase1.sqlite3-wal
+data/*.before-phase1.sqlite3-shm
+data/*.before-phase2.sqlite3
+data/*.before-phase2.sqlite3-wal
+data/*.before-phase2.sqlite3-shm
+
+# Persoenliche Knowledge-Dateien gehoeren nie ins Repository.
+# Standardmaessig liegt der Knowledge Root unter data/knowledge/, normalerweise
+# wird er aber via ORGANISER_KNOWLEDGE_ROOT nach ausserhalb gesetzt.
+/knowledge/
+/data/knowledge/
+*.md.tmp
+.*.tmp
+
+# Local formatting cache and prepared snapshots are not source.
+.ruff_cache/
+/public-candidate/

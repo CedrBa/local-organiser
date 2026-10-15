@@ -1,0 +1,1 @@
+"""Personal Organiser application package."""

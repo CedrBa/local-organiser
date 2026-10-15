@@ -1,0 +1,5 @@
+# Runtime and development dependencies are defined in pyproject.toml.
+# `dev` includes the optional PDF extra (pypdf) so the isolated PDF parser is
+# exercised in CI; a production install may leave it out and PDFs are then
+# reported as unsupported instead of failing the service.
+-e .[dev]

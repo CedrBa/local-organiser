@@ -1,0 +1,17 @@
+# Template only: adapt user, checkout, venv and private environment file before installing.
+[Unit]
+Description=Local Organiser API
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=your-user
+EnvironmentFile=/home/your-user/.config/local-organiser/organiser.env
+WorkingDirectory=/srv/local-organiser
+ExecStart=/srv/local-organiser/.venv/bin/python -m uvicorn organiser_api:app --host 127.0.0.1 --port 8765
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
